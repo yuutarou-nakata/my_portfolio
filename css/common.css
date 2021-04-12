@@ -148,15 +148,18 @@ h1 {
 }
 
 .skill_img img {
-  width: 60px;
+  width: 50px;
 }
 .work_all {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .work_item {
-  flex: 32%;
+  flex: 25%;
   margin-right: 2%;
+  margin-left: 2%;
 }
 
 .work_item:nth-of-type(3n) {
@@ -164,7 +167,7 @@ h1 {
 }
 
 .work_item a img {
-  width: 100%;
+  width: 90%;
 }
 .work_body p {
   text-align: center;
