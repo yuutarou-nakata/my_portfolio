@@ -47,19 +47,59 @@ li {
   background-color: rgb(68, 189, 226);
 }
 
-
 h1 {
   font-family:monospace;
 }
 
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
+/* @keyframes showTextB{
+  0%{
+  opacity: 0;
+  transform: translatey(60px);
   }
-  100% {
-    transform:translateX(25%);
+  100%{
+    opacity: 1;
+  }
+
+} */
+/* @keyframes showTextT{
+  0%{
+  opacity: 0;
+  transform: translatey(-60px);
+  }
+  100%{
+    opacity: 1;
+  }
+
+} */
+
+@keyframes showTextB{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(0%);
   }
 }
+
+.textAnimation span{
+  display: inline-block;
+}
+
+.textAnimation > span{
+  overflow: hidden;
+}
+
+.textAnimation span > span{
+  animation: showTextB 3s backwards;
+}
+
+/* .textAnimation span:nth-of-type(odd){
+  animation: showTextT ease-out 3s backwards;
+}
+.textAnimation span:nth-of-type(even){
+  animation: showTextB  ease-out 3s backwards;
+} */
+
 .top_title {
   font-size: 50px;
   font-weight: bold;  color: rgb(4, 6, 110);
