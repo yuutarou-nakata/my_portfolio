@@ -100,8 +100,26 @@ h1 {
   animation: showTextB  ease-out 3s backwards;
 } */
 
+.animationTarget{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+.font2.animationTarget,
+.font3.animationTarget,
+.font4.animationTarget{
+  transform: translateX(50px);
+  transition: 1s;
+}
+
+.animationTarget.show{
+  transform: none;
+  opacity: 1;
+}
+
 .top_title {
-  font-size: 50px;
+  font-size: 75px;
   font-weight: bold;  color: rgb(4, 6, 110);
   letter-spacing: 5px;
   text-shadow: 5px 5px 8px slategray;
@@ -129,7 +147,7 @@ h1 {
   margin-top: 100px;
 }
 .inner_right{
-  text-align: center;
+  padding-top: 5%;
 }
 .font1 {
   display: flex;
@@ -179,6 +197,83 @@ h1 {
   margin: 0 auto 30px;
   box-shadow: 25px 25px 0 rgb(68, 189, 226)
 }
+
+.css-cube {
+  
+  /* 立体の大きさ傾きの指定 */
+  width: 100px;
+  height: 100px;
+  margin: 5% 46%;
+  border: none;
+  transform-style: preserve-3d;
+  /* ３Ｄで表示 */
+  transform: rotateY(-30deg) rotateX(-30deg) rotateZ(10deg);
+  /* 立体の傾き */
+  display: inline-block;
+  animation: cubeAnime 2.2s linear infinite;
+  /* 動きの指定 */
+}
+
+@keyframes cubeAnime {
+
+  /* 回転方向の指定 */
+  50% {
+    transform: rotateY(-30deg) rotateX(-30deg) rotateZ(10deg);
+  }
+
+  100% {
+    transform: rotateY(330deg) rotateX(330deg) rotateZ(10deg);
+  }
+}
+
+.css-face {
+  /* 各面の指定 */
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  line-height: 100px;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+  /* opacity: 0.5; */
+  /* 透明度を指定 */
+  backface-visibility: visible;
+  /* 裏面を表示 */
+}
+
+.css-forward {
+  /* 前面の指定 */
+  transform: translateZ(50px);
+}
+
+.css-reverse {
+  /* 後面の指定 */
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.css-right {
+  /* 右面の指定 */
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.css-left {
+  /* 左面の指定 */
+  background-color: #fff;
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.css-top {
+  /* 上面の指定 */
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.css-bottom {
+  /* 下面の指定 */
+  background-color: #fff;
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
 .skill_item {
   display: flex;
   margin-bottom: 50px;
